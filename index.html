@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        <script src="https://unpkg.com/realm-web/dist/bundle.iife.js"></script>
+
+        <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+        <link rel="stylesheet" href="main.css">
+
+        <link rel="icon" href="favicon.png">
+
+        <title>Random Person Finder</title>
+    </head>
+    <body>
+        <main class="container">
+            <h1>Random Person Generator 🎲</h1>
+            <button id="main">find someone...</button>
+
+            <!-- person -->
+            <article aria-busy="false">
+                <div id="card">
+                    <img id="image" alt="hi" src="">
+                    <h2 id="name"></h2>
+                    <i id='date'></i>
+                    <p id="description"></p>
+                    <i id="death-reason"></i><br/><br/>
+                    <a target="_blank" rel="noopener noreferrer">more info...</a>
+                </div>
+            </article>
+        </main>
+
+        <footer>made by <a href="https://github.com/huskynp">huskynp</a></footer>
+
+        <script src="generator.js"></script>
+        <script src="to-emoji.js"></script>
+    </body>
+</html>
