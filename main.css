@@ -11,6 +11,16 @@ button#main{
     margin: 5em auto auto auto;
 }
 
+#known-cod{
+    width: 40%;
+    margin: 1em auto auto auto;
+}
+
+#year{
+    width: 40%;
+    margin: 1em auto auto auto;
+}
+
 article{
     width: 50%;
     display: flex;
@@ -32,6 +42,11 @@ article h2{
 
 article> #date{
     margin: 0 auto 2em auto;
+}
+
+#back[aria-disabled="true"]{
+    pointer-events: none;
+    color: grey;
 }
 
 footer{

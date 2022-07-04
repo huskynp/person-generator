@@ -20,6 +20,8 @@
         <main class="container">
             <h1>Random Person Generator 🎲</h1>
             <button id="main">find someone...</button>
+            <div id="known-cod"><input type="checkbox"> known cause of death?</div>
+            <div id="year"><input type="number" max='2022' placeholder="alive in the year..."></div>
 
             <!-- person -->
             <article aria-busy="false">
@@ -29,7 +31,8 @@
                     <i id='date'></i>
                     <p id="description"></p>
                     <i id="death-reason"></i><br/><br/>
-                    <a target="_blank" rel="noopener noreferrer">more info...</a>
+                    <a id="link" target="_blank" rel="noopener noreferrer">more info...</a><br/><br/>
+                    <a id="back" aria-disabled="true">← go back</a>
                 </div>
             </article>
         </main>
