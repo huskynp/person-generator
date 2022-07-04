@@ -50,10 +50,11 @@ $("#main").click(async function(){
     $("#article").attr('aria-busy', true);
     let queries = [{ $sample: { size: 1 } }];
     if($("#known-cod>input").is(':checked')) queries.unshift({$match: { 'death-reason': { $ne : '' }}});
-    if($("#year>input").val() !== '') 
+    if($("#year>input").val() !== ''){
         queries.unshift({$match: { 'died': { $ne : '' }}});
         queries.unshift({$match: {$expr: {$gte: [{$toInt: "$died"}, parseInt($("#year>input").val())]}}});
         queries.unshift({$match: {$expr: {$lte: [{$toInt: "$born"}, parseInt($("#year>input").val())]}}});
+    }
     const docs = await collection.aggregate(queries);
     c_doc = docs[0];
     if(c_doc) setCard(c_doc);
